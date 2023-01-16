@@ -1,13 +1,10 @@
-const Customer = ({ customer: { name, email } }) => {
+const Customer = ({ customer: { id, name, email } }) => {
   return (
-    <>
-      <table>
-        <tr>
-          <td>{name}</td>
-          <td>{email}</td>
-        </tr>
-      </table>
-    </>
+    <tr key={id}>
+      <td>{id}</td>
+      <td>{name}</td>
+      <td>{email}</td>
+    </tr>
   );
 };
 export default Customer;

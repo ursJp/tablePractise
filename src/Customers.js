@@ -7,17 +7,16 @@ const Customers = ({ customers }) => {
       <table>
         <thead>
           <tr>
+            <th>Id</th>
             <th>Names</th>
             <th>Email</th>
           </tr>
         </thead>
       </table>
       <tbody>
-        <td>
-          {customers.map((customer) => {
-            return <Customer key={customer.id} customer={customer} />;
-          })}
-        </td>
+        {customers.map((customer) => {
+          return <Customer key={customer.id} customer={customer} />;
+        })}
       </tbody>
     </div>
   );
